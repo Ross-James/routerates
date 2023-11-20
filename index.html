@@ -7,8 +7,56 @@
     <link rel="stylesheet" href="styles/css/main.css">
 
     <title>RouteRates</title>
+
+    <style>
+        table{
+            width: 100%;
+            max-width: 500px;
+            border-collapse: collapse;
+        }
+
+        table,
+        tbody,
+        td,th{
+            border: 1px solid #000;
+        }
+
+    </style>
 </head>
 <body>
+
+    <section class="section">
+        <form id="tripCostForm">
+            <input type="number" placeholder="Enter travel distance" data-distance>
+            <input type="number" placeholder="Enter rate/Km" data-rate>
+            <button>Calculate trip cost</button>
+        </form>
+
+        <p>Trip cost: <span data-trip-cost></span></p>
+
+        <form id="customerChangeForm">
+            <input type="number" placeholder="Enter rate/Km" data-customer-paid>
+            <button>Calculate customer change</button>
+        </form>
+
+        <p>Customer change: <span data-customer-change></span></p>
+
+        <button id="saveEntryBtn">Save entry</button>
+    </section>
+
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Distance:</th>
+                <th>Rate/Km:</th>
+                <th>trip Cost:</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
     
 
     <script type="module" src="./js/script.js"></script>
